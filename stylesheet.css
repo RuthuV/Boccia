@@ -1,0 +1,32 @@
+* {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #A9F5A9;
+    font-size: 2em;
+}
+
+a.button {
+    text-decoration: none;    
+    border: 3px solid #AA0000;
+    background-color: #2EFEF7;
+    height: auto;
+    width: auto;
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    color: #B40404;
+}
+
+.border {
+    border: medium;
+    border-style: solid;
+}
+
+.eingabe {
+    font-size: 1.5em;
+}
+
