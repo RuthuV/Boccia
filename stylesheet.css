@@ -32,15 +32,15 @@ a.button {
 
 @media only screen and (max-device-width: 768px) {
   body {
-    font-size: 1.2em;
+    font-size: 1.2em !important;
   }
 }
 
 @media only screen and (max-device-width: 360px) {
   body {
-    font-size: 0.7em;
+    font-size: 0.7em !important;
   }
   .eingabe {
-      font-size: 0.7em;
+      font-size: 0.7em !important;
   }
 }
