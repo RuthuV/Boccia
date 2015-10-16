@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     </head>
     <body>
-        <p>Log in</p>
+        <h3>Log in</h3>
             <form action="log_in.php" method="post">
 		Username: <br>
                 <input type="text" name="username" style="font-size: 1.5em;">

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,6 +8,13 @@
         <title>Team eintragen - Freundschaftsturnier 12.07.2015</title>
     </head>
     <body>
+        <?php
+        if(!isset($_SESSION["admin"])) {
+            echo "<p>Zugriff verweigert.</p><br>";
+            echo "<p>zur Login-Seite gelangen Sie <a href='login.php'>hier</a>.</p>";
+            exit();
+        }
+        ?>
         <h2>Team eintragen</h2>
         <p>Bitte tragen Sie hier ein Team ein. Suchen Sie sich die Spieler in der Men&uuml;leiste aus</p>
         <form name="teamform" method="post" action="teaminput.php">

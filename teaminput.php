@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,6 +8,13 @@
         <title>Best&auml;tigung</title>
     </head>
     <body>
+        <?php
+        if(!isset($_SESSION["admin"])) {
+            echo "<p>Zugriff verweigert.</p><br>";
+            echo "<p>zur Login-Seite gelangen Sie <a href='login.php'>hier</a>.</p>";
+            exit();
+        }
+        ?>
         <h1>Team eintragen</h1>
         <p>Danke f&uuml;r die Eingabe!</p>
         <br>
@@ -29,6 +39,6 @@
         <br>
         <p><a href="register_team_1.php" class="button">Weitere Teams eintragen</a></p>
         <br>
-        <p><a href="turnier_1.php" class="button">Zur&uuml;ck zur &Uuml;bersicht</a></p>
+        <p><a href="turnier_edit.php" class="button">Zur&uuml;ck zur &Uuml;bersicht</a></p>
     </body>
 </html>

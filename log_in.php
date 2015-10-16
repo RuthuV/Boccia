@@ -14,13 +14,13 @@ session_start();
 	$name=$_POST['username'];
 	$pw=$_POST['password'];
         $_SESSION["admin"];
-        
-        if($name=="test" && $pw=="123") {
+        if($name=="test" && md5($pw)=="202cb962ac59075b964b07152d234b70") {
             $_SESSION["admin"] = true;
         }
         
         if(!isset($_SESSION["admin"])) {
-            echo "Nicht genügend Rechte.";
+            echo "<p>Zugriff verweigert.</p><br>";
+            echo "<p>zur Login-Seite gelangen Sie <a href='login.php'>hier</a>.</p>";
             exit();
         }
 	
@@ -31,11 +31,13 @@ session_start();
             echo "No Access...";
         }*/
         ?>
+        <h2>Zugriff gewährt</h2>
+        <p>Nun sind Sie im geschützten Bereich. Hier können Sie allfällige Änderungen oder neue Einträge vornehmen.</p>
+        <p>Wählen Sie unten das Turnier aus, das Sie bearbeiten möchten.</p>
+        <br>
+        <p><a class="button" href="turnier_edit.php">Freundschaftsturnier 12.07.2015</a></p>
         <br>
         <br>
-        <h2>Inhalt</h2>
-        <p>Meaningless text... LOL</p>
-        <br>
-        <h3><a href="logout.php">Logout</a></h3>
+        <p><a class="button" href="logout.php">Logout</a></p>
     </body>
 </html>

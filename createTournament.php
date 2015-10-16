@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +9,12 @@
     </head>
     <body>
         <?php
+        
+        if(!isset($_SESSION["admin"])) {
+            echo "<p>Zugriff verweigert.</p><br>";
+            echo "<p>zur Login-Seite gelangen Sie <a href='login.php'>hier</a>.</p>";
+            exit();
+        }
         
         //connection
         $servername="localhost";

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,6 +9,13 @@
         <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     </head>
     <body>
+        <?php
+        if(!isset($_SESSION["admin"])) {
+            echo "<p>Nicht genügend Rechte.</p>";
+            echo "<p>Bitte <a href='login.php'>hier</a> einloggen.</p>";
+            exit();
+        }
+        ?>
         <h1>Delete Players</h1>
         <br>
         <?php

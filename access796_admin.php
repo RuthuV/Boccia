@@ -5,7 +5,7 @@ session_start();
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Administrator</title>
+        <title>weitere Einstellungen</title>
         <link rel="stylesheet" type="text/css" href="stylesheet.css" />
     </head>
     <body>
@@ -123,5 +123,8 @@ session_start();
         
         echo "<br>";
         ?>
+        <br><br>
+        <p><a href="turnier_edit.php" class="button">Zur&uuml;ck</a></p>
+        <br>
     </body>
 </html>

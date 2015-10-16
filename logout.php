@@ -13,11 +13,7 @@ session_start();
 	<?php
         session_unset();
         ?>
-        <br>
-        <br>
-        <h2>Erfolgreich ausgeloggt!</h2>
-        <p>und tschüss...</p>
-        <br>
-        <h3><a href="login.php">Back to Login-Page</a></h3>
+        <h3>Erfolgreich ausgeloggt!</h3>
+        <p><a href="login.php">Zurück zur Login-Seite.</a></p>
     </body>
 </html>
